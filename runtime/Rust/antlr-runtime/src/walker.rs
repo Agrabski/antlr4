@@ -1,7 +1,6 @@
-mod tree;
-
+use crate::tree::ParseTree;
 
 trait ParseTreeWalker
 {
-	fn walk(&self, &mut Box<dyn tree::ParseTree>);
+	fn walk(&self, tree: &mut Box<dyn ParseTree>);
 }

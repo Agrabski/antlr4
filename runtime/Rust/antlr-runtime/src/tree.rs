@@ -31,16 +31,23 @@ impl ParseTree for TerminalNode
 
 pub struct Token
 {
-	pub text: String
+	pub text: String,
+	_type: i64
 }
 
 impl Token
 {
-	fn new(text : &String) -> Token
+	fn new(text : &String, type: i64) -> Token
 	{
 		return Token
 		{
-			text: text.clone()
+			text: text.clone(),
+			_type: type
 		};
+	}
+
+	fn getType(self&) -> i64
+	{
+		return self._type;
 	}
 }
